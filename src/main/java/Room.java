@@ -14,6 +14,10 @@ public abstract class Room {
         return this.roomType.getCapacity();
     }
 
+    public double getRoomRate(){
+        return this.roomType.getRoomRate();
+    }
+
     public RoomType getRoomType() {
         return this.roomType;
     }

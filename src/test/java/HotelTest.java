@@ -2,6 +2,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class HotelTest {
 
@@ -9,6 +10,8 @@ public class HotelTest {
     Guest guest1;
     Guest guest2;
     Guest guest3;
+    Booking booking1;
+    Bedroom bedroom1;
 
     @Before
     public void before(){
@@ -39,5 +42,13 @@ public class HotelTest {
         hotel.checkInGuest(guest2);
         hotel.checkInGuest(guest3);
         assertEquals(3, hotel.getGuests());
+    }
+
+    @Test
+    public void hotelCanMakeABooking(){
+        bedroom1 = new Bedroom(10, RoomType.DOUBLE);
+        Booking booking = hotel.makeBooking(bedroom1, 2);
+        assertTrue(booking instanceof Booking);
+
     }
 }

@@ -27,5 +27,10 @@ public class BedroomTest {
         assertEquals(10, doubleBedroom.getRoomNumber());
     }
 
+    @Test
+    public void doubleBedroomHasARoomRate(){
+        assertEquals(20, doubleBedroom.getRoomRate(), 0.0);
+    }
+
 
 }
